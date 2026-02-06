@@ -1,0 +1,145 @@
+.breaking-news-container {
+  background-color: #204a92;
+  border-bottom: none;
+  border-radius: 50px;
+  overflow: hidden;
+}
+
+.breaking-news-container .container-fluid {
+  padding-left: 0;
+}
+
+.breaking-news-banner {
+  background-color: #dc3545;
+  color: white;
+  padding: 0.75rem 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: bold;
+  white-space: nowrap;
+  flex-shrink: 0;
+  border-radius: 25px;
+  margin-left: 3px;
+}
+
+.pulse-icon {
+  animation: pulse 1.5s ease-in-out infinite;
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+
+@keyframes pulse {
+
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.5;
+  }
+}
+
+.breaking-news-text {
+  font-size: 0.9rem;
+  letter-spacing: 0.5px;
+}
+
+.news-ticker {
+  flex: 1;
+  overflow: hidden;
+  padding: 0.75rem 1.5rem;
+  background-color: #204a92;
+  position: relative;
+}
+
+.ticker-wrapper {
+  width: 100%;
+  overflow: hidden;
+}
+
+.ticker-content {
+  display: inline-flex;
+  white-space: nowrap;
+  animation: slide 60s linear infinite;
+  will-change: transform;
+}
+
+.ticker-spacer {
+  margin: 0 2rem;
+  color: white;
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.news-item {
+  font-size: 0.9rem;
+  color: white;
+}
+
+.separator {
+  margin: 0 0.5rem;
+  color: white;
+}
+
+
+.breaking-news-container .d-flex {
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+  .breaking-news-container .d-flex {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .breaking-news-banner {
+    width: 100%;
+    justify-content: center;
+    border-radius: 25px 25px 0 0;
+    margin-left: 0;
+  }
+
+  .news-ticker {
+    width: 100%;
+    padding: 0.5rem 1rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .breaking-news-container {
+    border-radius: 15px;
+    margin-top: 10px;
+  }
+
+  .breaking-news-banner {
+    padding: 0.5rem;
+    font-size: 0.8rem;
+    border-radius: 15px 15px 0 0;
+  }
+
+  .breaking-news-text {
+    font-size: 0.8rem;
+  }
+
+  .pulse-icon {
+    font-size: 0.8rem;
+  }
+
+  .news-ticker {
+    padding: 0.5rem;
+  }
+
+  .news-item {
+    font-size: 0.8rem;
+  }
+}

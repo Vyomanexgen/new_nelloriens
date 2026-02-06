@@ -1,0 +1,26 @@
+.navbar {
+  background: linear-gradient(to right, #0e80d7, #007bff);
+  border-bottom: 1.5px solid #ffffff;
+  min-height: 60px;
+}
+
+.navbar-nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.nav-link {
+  color: #dde6ed;
+  font-size: 1rem;
+  margin: 0 16px;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  text-decoration: underline;
+}
+

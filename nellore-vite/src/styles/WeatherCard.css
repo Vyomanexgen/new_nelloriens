@@ -1,0 +1,25 @@
+.card-container {
+  width: 100%;
+}
+
+.weather-card {
+  background: linear-gradient(135deg, #1e88e5, #1565c0);
+  color: #ffffff;
+  width: 100%;
+  min-height: 180px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.weather-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 18px rgba(30, 136, 229, 0.3);
+}
+
+.weather-card h1 {
+  font-size: 2.5rem;
+}
+
+.weather-card p {
+  font-size: 0.95rem;
+}
+

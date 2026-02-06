@@ -1,0 +1,261 @@
+.movies-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: #f8f9fa;
+}
+
+/* Main Content */
+.movies-main-content {
+  flex: 1;
+  padding: 2rem 0;
+  background-color: #f8f9fa;
+}
+
+/* Recommended Movies Section */
+.movies-recommended-section {
+  padding: 2rem 0;
+  background-color: #f8f9fa;
+}
+
+.movies-section-heading {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.movies-heading-title {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #212529;
+  margin: 0;
+}
+
+
+/* Movies Cards Row */
+.movies-cards-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+/* Common Ads Container */
+.common-ads-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  height: 100%;
+}
+
+.ad-placeholder {
+  background-color: #e9ecef;
+  border-radius: 1rem;
+  min-height: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #adb5bd;
+  font-weight: 600;
+  border: 2px dashed #dee2e6;
+}
+
+/* Movie Card */
+.movie-card {
+  background-color: transparent;
+  /* Remove white background for a cleaner look if desired, or keep it. Let's keep it but minimal. */
+  border-radius: 12px;
+  /* Adjusted from 50px to a more standard 12px based on typical UI */
+  overflow: hidden;
+  box-shadow: none;
+  /* Let the poster handle the visual weight */
+  transition: all 0.3s ease;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+}
+
+.movie-card:hover {
+  transform: translateY(-5px);
+}
+
+.movie-card-poster {
+  width: 100%;
+  aspect-ratio: 2 / 3;
+  /* Enforce standard movie poster aspect ratio */
+  height: auto;
+  /* Let aspect-ratio controls height */
+  border-radius: 12px;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.movie-card-poster img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.movie-card:hover .movie-card-poster img {
+  transform: scale(1.05);
+}
+
+.movie-card-content {
+  padding: 0.75rem 0 0 0;
+  /* Add top padding spacing */
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+/* Rating Info - Now an Overlay */
+.movie-rating-info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  /* Increased gap */
+  padding: 0.75rem;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.5) 75%, transparent 100%);
+  color: white;
+  z-index: 2;
+}
+
+.movie-star-icon {
+  font-size: 0.9rem;
+  color: #dc3545;
+  /* Keep red star or make it gold/yellow? Keeping red for now based on previous requests or defaults, but typically #ffc107 is gold. Step 0 pic had red stars */
+}
+
+.movie-rating {
+  font-weight: 600;
+  color: #ffffff;
+  /* White text on dark overlay */
+  font-size: 0.95rem;
+}
+
+.movie-votes-inline {
+  color: #e0e0e0;
+  /* Light gray for contrast */
+  font-size: 0.85rem;
+}
+
+.movie-votes {
+  /* Keeping for backward compat if needed, but updated styles are above */
+  font-size: 0.875rem;
+  color: #6c757d;
+  margin-bottom: 0.5rem;
+}
+
+/* Movie Title */
+.movie-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #212529;
+  margin: 0;
+  line-height: 1.3;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* Movie Genres */
+.movie-genres {
+  font-size: 0.85rem;
+  color: #6c757d;
+  line-height: 1.4;
+  margin-top: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+  .movies-cards-row {
+    grid-template-columns: repeat(3, 1fr);
+    /* Keep 3 cols on tablet if possible, or 2 */
+  }
+}
+
+@media (max-width: 768px) {
+  .movies-cards-row {
+    grid-template-columns: repeat(2, 1fr);
+    /* 2 cols on mobile */
+  }
+
+  .common-ads-container {
+    margin-top: 2rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .movies-cards-row {
+    grid-template-columns: 1fr;
+    /* 1 col on small mobile */
+  }
+}
+
+/* Load More Button */
+.movie-load-more-btn {
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+  min-width: 160px;
+}
+
+.movie-load-more-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(13, 110, 253, 0.25);
+}
+
+/* Sidebar News Lines (Updates) */
+.movies-sidebar-news {
+  background-color: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.movies-sidebar-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #212529;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+}
+
+.movies-news-lines-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.movies-news-line-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  font-size: 0.95rem;
+  color: #495057;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid #f1f3f5;
+}
+
+.movies-news-line-item:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.movies-news-line-item i {
+  font-size: 1.1rem;
+  color: #ffc107;
+  /* Gold/Warning color */
+  margin-top: 0.1rem;
+  flex-shrink: 0;
+}

@@ -1,0 +1,645 @@
+.transport-page-container {
+    padding-bottom: 2rem;
+}
+
+/* Search Section */
+.transport-search-section {
+    background: white;
+    border-radius: 12px;
+    padding: 24px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    margin-bottom: 2rem;
+    position: relative;
+    z-index: 10;
+}
+
+.search-form-grid {
+    display: grid;
+    grid-template-columns: 2fr 2fr 1.5fr auto;
+    gap: 16px;
+    align-items: flex-end;
+}
+
+.input-group-custom {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.input-label {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #6c757d;
+    margin-bottom: 6px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.input-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    border: 1px solid #dee2e6;
+    border-radius: 8px;
+    padding: 10px 14px;
+    transition: all 0.2s ease;
+    background: #f8f9fa;
+}
+
+.input-wrapper:focus-within {
+    border-color: #0d6efd;
+    box-shadow: 0 0 0 3px rgba(13, 110, 253, 0.15);
+    background: white;
+}
+
+.input-icon {
+    color: #6c757d;
+    margin-right: 12px;
+    font-size: 1.1rem;
+}
+
+.search-input {
+    border: none;
+    background: transparent;
+    width: 100%;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #212529;
+    outline: none;
+}
+
+.search-input::placeholder {
+    color: #adb5bd;
+}
+
+.search-btn {
+    background: #d84e55;
+    /* RedBus style red */
+    color: white;
+    border: none;
+    padding: 12px 32px;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    height: 48px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.search-btn:hover {
+    background: #c03e44;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(216, 78, 85, 0.3);
+}
+
+/* Suggestions Dropdown */
+.suggestions-list {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12);
+    margin-top: 6px;
+    list-style: none;
+    padding: 0;
+    z-index: 100;
+    max-height: 200px;
+    overflow-y: auto;
+    border: 1px solid #eee;
+}
+
+.suggestion-item {
+    padding: 10px 16px;
+    cursor: pointer;
+    font-size: 0.95rem;
+    transition: background 0.2s;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.suggestion-item:hover {
+    background-color: #f1f3f5;
+    color: #0d6efd;
+}
+
+/* Filters Sidebar */
+.filters-sidebar {
+    background: white;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+    height: fit-content;
+}
+
+.filter-group {
+    margin-bottom: 24px;
+    border-bottom: 1px solid #f1f3f5;
+    padding-bottom: 16px;
+}
+
+.filter-group:last-child {
+    border-bottom: none;
+}
+
+.filter-title {
+    font-size: 0.95rem;
+    font-weight: 700;
+    margin-bottom: 12px;
+    color: #212529;
+    display: flex;
+    justify-content: space-between;
+}
+
+.checkbox-label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 8px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    color: #495057;
+}
+
+.styled-checkbox {
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+    accent-color: #d84e55;
+}
+
+/* Transport Mode Tabs (Top Filter) */
+.transport-mode-tabs {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 24px;
+    overflow-x: auto;
+    padding-bottom: 4px;
+    /* Space for scrollbar if needed */
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
+}
+
+.transport-mode-tabs::-webkit-scrollbar {
+    display: none;
+}
+
+.mode-tab {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 24px;
+    background: white;
+    border: 1px solid #e9ecef;
+    border-radius: 50px;
+    /* Pill shape */
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #495057;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    white-space: nowrap;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
+}
+
+.mode-tab:hover {
+    background: #f8f9fa;
+    transform: translateY(-1px);
+}
+
+.mode-tab.active {
+    background: #0d6efd;
+    /* Or Theme Primary */
+    color: white;
+    border-color: #0d6efd;
+    box-shadow: 0 4px 10px rgba(13, 110, 253, 0.25);
+}
+
+.mode-tab i {
+    font-size: 1.1rem;
+}
+
+/* Results Section */
+.results-header-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.results-count {
+    font-weight: 600;
+    color: #495057;
+}
+
+.transport-card {
+    background: white;
+    border-radius: 10px;
+    border: 1px solid #f1f3f5;
+    margin-bottom: 16px;
+    padding: 20px;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.transport-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    border-color: #dee2e6;
+}
+
+/* Update TransportCard Layout for Action Buttons */
+.card-main-content {
+    display: grid;
+    grid-template-columns: 2fr 1.5fr 1.5fr 1.2fr;
+    gap: 16px;
+    align-items: center;
+}
+
+.operator-info h4 {
+    margin: 0 0 4px 0;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #212529;
+}
+
+.bus-type {
+    font-size: 0.85rem;
+    color: #868e96;
+}
+
+.rating-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    background: #198754;
+    color: white;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    margin-left: 8px;
+}
+
+.time-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.time-range {
+    font-weight: 600;
+    color: #495057;
+    font-size: 1.05rem;
+}
+
+.duration-text {
+    font-size: 0.8rem;
+    color: #868e96;
+    margin-top: 2px;
+}
+
+.price-info {
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.price-tag {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #212529;
+    margin-bottom: 4px;
+}
+
+.discount-text {
+    font-size: 0.75rem;
+    color: #dc3545;
+    background: rgba(220, 53, 69, 0.1);
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-size: 0.75rem;
+}
+
+.seats-info {
+    font-size: 0.85rem;
+    color: #6c757d;
+    margin-top: 4px;
+}
+
+/* Buttons */
+.action-buttons-col {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    /* space between buttons */
+}
+
+.book-btn {
+    background: #d84e55;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.book-btn:hover {
+    background: #c03e44;
+}
+
+.preview-btn {
+    background: white;
+    color: #0d6efd;
+    border: 1px solid #0d6efd;
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.preview-btn:hover {
+    background: #f0f7ff;
+}
+
+.track-btn {
+    background: white;
+    color: #dc3545;
+    border: 1px solid #dc3545;
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+}
+
+.track-btn:hover {
+    background: #fff5f5;
+}
+
+/* Status Indicators */
+.status-badge {
+    display: inline-block;
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 4px 8px;
+    border-radius: 4px;
+    margin-top: 8px;
+}
+
+.status-running {
+    background: #e6fcf5;
+    color: #0ca678;
+}
+
+.status-delayed {
+    background: #fff5f5;
+    color: #e03131;
+}
+
+/* Metro Specifics */
+.metro-route {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #d63384;
+}
+
+/* Train specifics */
+.train-classes {
+    display: flex;
+    gap: 8px;
+    margin-top: 8px;
+}
+
+.train-class-badge {
+    font-size: 0.75rem;
+    border: 1px solid #dee2e6;
+    padding: 4px 8px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.train-class-badge:hover,
+.train-class-badge.selected {
+    border-color: #0d6efd;
+    background: #e7f5ff;
+    color: #0d6efd;
+}
+
+/* Modal Styles */
+.transport-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    animation: fadeIn 0.3s ease;
+}
+
+.transport-modal-content {
+    background: white;
+    width: 100%;
+    max-width: 600px;
+    border-radius: 16px;
+    padding: 24px;
+    position: relative;
+    max-height: 90vh;
+    overflow-y: auto;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    animation: slideUp 0.3s ease;
+}
+
+.modal-close-btn {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: #6c757d;
+    cursor: pointer;
+}
+
+.modal-header {
+    border-bottom: 1px solid #dee2e6;
+    padding-bottom: 16px;
+    margin-bottom: 16px;
+}
+
+.modal-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #212529;
+    margin: 0;
+}
+
+.modal-section {
+    margin-bottom: 20px;
+}
+
+.modal-section-title {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #495057;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    .search-form-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .search-form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .card-main-content {
+        grid-template-columns: 1fr;
+        text-align: left;
+        gap: 12px;
+    }
+
+    .time-info,
+    .price-info {
+        align-items: flex-start;
+        text-align: left;
+    }
+
+    .action-buttons-col {
+        flex-direction: row;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+    }
+
+    .book-btn {
+        grid-column: span 2;
+    }
+}
+
+/* Live Tracking Specific Styles */
+.live-blink {
+    animation: blinker 1.5s linear infinite;
+}
+
+@keyframes blinker {
+    50% {
+        opacity: 0;
+    }
+}
+
+.live-timeline {
+    position: relative;
+    padding-left: 10px;
+}
+
+.timeline-items {
+    border-left: 2px solid #dee2e6;
+    margin-left: 10px;
+    padding-left: 20px;
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.timeline-item:last-child {
+    margin-bottom: 0;
+}
+
+.timeline-dot {
+    position: absolute;
+    left: -26px;
+    /* Adjust based on padding/border */
+    top: 5px;
+    width: 10px;
+    height: 10px;
+    background: #dee2e6;
+    border-radius: 50%;
+    border: 2px solid white;
+    box-shadow: 0 0 0 1px #dee2e6;
+}
+
+.timeline-item.completed .timeline-dot {
+    background: #198754;
+    box-shadow: 0 0 0 1px #198754;
+}
+
+.timeline-time {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #495057;
+    margin-bottom: 2px;
+}
+
+.timeline-content {
+    background: #f8f9fa;
+    padding: 10px;
+    border-radius: 8px;
+    font-size: 0.9rem;
+}
+
+.location-icon-box {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: #e7f5ff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

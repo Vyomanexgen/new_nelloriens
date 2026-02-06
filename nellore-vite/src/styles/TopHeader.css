@@ -1,0 +1,15 @@
+.top-header {
+  background-color: #114389;
+  color: white;
+  padding: 8px 0;
+  font-size: 0.9rem;
+}
+
+.top-header i {
+  color: #60a5fa;
+}
+
+.top-header span {
+  font-weight: 500;
+}
+

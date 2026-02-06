@@ -1,0 +1,96 @@
+.main-header {
+  background-color: white;
+  color: white;
+}
+
+.main-header .container-fluid {
+  padding-left: 0;
+  padding-right: 10px;
+}
+
+.main-header-content {
+  padding-left: 0;
+  margin-left: 0;
+}
+
+.logo-site-container {
+  gap: 0.75rem;
+  margin-left: 0;
+}
+
+.logo-circle {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: #0d6efd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.logo-icon {
+  font-size: 1.5rem;
+  color: white;
+}
+
+.site-title {
+  font-size: 1.75rem;
+  margin: 0;
+  color: #2d5a87;
+}
+
+.tagline {
+  font-size: 0.9rem;
+  color: #2d5a87;
+  margin-top: 0.25rem;
+}
+
+
+
+@media (max-width: 768px) {
+  .site-title {
+    font-size: 1.25rem;
+  }
+
+  .tagline {
+    font-size: 0.8rem;
+  }
+
+  .logo-circle {
+    width: 50px;
+    height: 50px;
+  }
+
+  .logo-icon {
+    font-size: 1.25rem;
+  }
+
+  /* Stack layout on mobile */
+  .main-header-content {
+    flex-direction: column;
+    align-items: stretch !important;
+    gap: 1rem;
+    padding-bottom: 0.5rem;
+  }
+
+  /* Reset ms-auto spacing for stacked layout */
+  .main-header-content>div.ms-auto {
+    margin-left: 0 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  /* Center the logo section */
+  .logo-site-container {
+    justify-content: flex-start;
+    /* Or center if desired, but user screenshot has left aligned */
+    width: 100%;
+  }
+
+  .main-header .container-fluid {
+    padding-left: 15px;
+    /* Add padding to prevent sticking to left */
+    padding-right: 15px;
+  }
+}

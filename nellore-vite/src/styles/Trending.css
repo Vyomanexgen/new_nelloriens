@@ -1,0 +1,25 @@
+.card-container {
+  width: 100%;
+}
+
+.trending-card {
+  width: 100%;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.trending-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+}
+
+.trending-link {
+  display: block;
+  font-size: 0.95rem;
+  color: #333;
+  transition: color 0.2s ease;
+}
+
+.trending-link:hover {
+  color: #0d6efd;
+}
+

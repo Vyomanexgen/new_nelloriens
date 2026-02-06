@@ -1,0 +1,38 @@
+.main-content-area {
+  padding: 2rem 0;
+  background-color: #f8f9fa;
+  min-height: 400px;
+}
+
+.content-sections {
+  display: flex;
+  flex-direction: column;
+}
+
+.main-content-area .row {
+  margin: 0;
+}
+
+.main-content-area .col-lg-8,
+.main-content-area .col-lg-4 {
+  padding: 0 1rem;
+}
+
+@media (max-width: 992px) {
+  .main-content-area .col-lg-8,
+  .main-content-area .col-lg-4 {
+    padding: 0 0.75rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .main-content-area {
+    padding: 1.5rem 0;
+  }
+
+  .main-content-area .col-lg-8,
+  .main-content-area .col-lg-4 {
+    padding: 0 0.5rem;
+  }
+}
+

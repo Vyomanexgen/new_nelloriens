@@ -1,0 +1,329 @@
+.news-feed-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(180deg, #edf3ff 0%, #f7f9ff 100%);
+}
+
+.news-feed-main {
+  flex: 1;
+  padding: 1.5rem 0 2rem;
+}
+
+.news-feed-section {
+  background-color: transparent;
+}
+
+.news-feed-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  margin-bottom: 1.5rem;
+}
+
+.news-feed-title {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.news-feed-title-icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 16px;
+  background: white;
+  box-shadow: 0 10px 20px rgba(15, 23, 42, 0.12);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #2563eb;
+  font-size: 1.3rem;
+}
+
+.news-feed-title-label {
+  margin: 0;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #7b8ab4;
+  font-weight: 600;
+}
+
+.news-feed-title-heading {
+  margin: 0;
+  font-size: 1.9rem;
+  color: #1c2a4d;
+  font-weight: 700;
+}
+
+.news-feed-controls {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.news-feed-tabs {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.news-feed-tab {
+  border: none;
+  border-radius: 999px;
+  padding: 0.55rem 1.6rem;
+  background-color: white;
+  color: #5a678c;
+  font-weight: 600;
+  box-shadow: inset 0 0 0 1px #dbe3f5;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.news-feed-tab.active {
+  background-color: #2563eb;
+  color: white;
+  box-shadow: 0 14px 26px rgba(37, 99, 235, 0.35);
+}
+
+.news-feed-tab:hover {
+  transform: translateY(-1px);
+}
+
+.news-feed-search {
+  position: relative;
+  min-width: 240px;
+  flex: 1;
+  max-width: 320px;
+}
+
+.news-feed-search i {
+  position: absolute;
+  top: 50%;
+  left: 1rem;
+  transform: translateY(-50%);
+  color: #9aa8c2;
+}
+
+.news-feed-search input {
+  width: 100%;
+  border-radius: 999px;
+  border: 1px solid #dbe3f5;
+  padding: 0.6rem 1.25rem 0.6rem 2.75rem;
+  background: white;
+  font-size: 0.95rem;
+  outline: none;
+}
+
+.news-feed-search input:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+}
+
+.news-feed-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.news-feed-card {
+  background-color: white;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 20px 35px rgba(13, 27, 62, 0.08);
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #e4ecff;
+}
+
+.news-feed-card-image {
+  width: 100%;
+  height: 180px;
+  overflow: hidden;
+}
+
+.news-feed-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.news-feed-card:hover .news-feed-card-image img {
+  transform: scale(1.05);
+}
+
+.news-feed-card-body {
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.news-feed-card-body h5 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #1c2a4d;
+  margin: 0;
+}
+
+.news-feed-card-meta {
+  color: #8a94b8;
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+.news-feed-card-btn {
+  margin-top: 0.75rem;
+  border-radius: 999px;
+  border: none;
+  padding: 0.55rem 1.5rem;
+  background-color: #e8f0ff;
+  color: #1a49c5;
+  font-weight: 600;
+  width: 100%;
+  text-align: center;
+  transition: background 0.2s ease;
+}
+
+.news-feed-card-btn:hover {
+  background-color: #cbdcff;
+}
+
+.news-feed-empty-state {
+  grid-column: 1 / -1;
+  min-height: 180px;
+  border-radius: 20px;
+  border: 1px dashed #d0daf2;
+  background: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  color: #6b7a99;
+}
+
+.news-feed-pagination {
+  margin-top: 2rem;
+}
+
+.news-feed-pagination-panel {
+  background: white;
+  border-radius: 999px;
+  padding: 0.5rem 1rem 0.5rem 0.5rem;
+  box-shadow: 0 20px 35px rgba(15, 23, 42, 0.08);
+  border: 1px solid #e3eaff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.news-pagination-controls-group {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.news-pagination-status-chip {
+  background: #eff4ff;
+  color: #4664ff;
+  padding: 0.35rem 0.85rem;
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: 0.85rem;
+}
+
+.news-pagination-controls {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.news-pagination-chip-btn {
+  border-radius: 999px;
+  min-width: 46px;
+  height: 46px;
+  padding: 0;
+  background: #ecf1ff;
+  color: #6275c9;
+  border: none;
+  font-weight: 600;
+  box-shadow: inset 0 -2px 4px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.news-pagination-chip-btn:hover:not(:disabled) {
+  transform: translateY(-1px);
+  background: #dfe8ff;
+}
+
+.news-pagination-chip-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.news-pagination-chip-btn-primary {
+  background: #2563eb;
+  color: white;
+  box-shadow: 0 14px 24px rgba(37, 99, 235, 0.3);
+}
+
+.news-pagination-loading-chip {
+  background: #eff4ff;
+  color: #5c6bc0;
+  padding: 0.4rem 1rem;
+  border-radius: 999px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+@media (max-width: 768px) {
+  .news-feed-heading {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .news-feed-controls {
+    width: 100%;
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .news-feed-search {
+    max-width: none;
+    width: 100%;
+  }
+
+  .news-feed-pagination-panel {
+    flex-direction: column;
+    align-items: flex-start;
+    border-radius: 24px;
+  }
+
+  .news-pagination-controls {
+    flex-wrap: wrap;
+  }
+
+  .news-pagination-loading-chip {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 576px) {
+  .news-feed-card-btn {
+    padding: 0.4rem 1rem;
+    font-size: 0.85rem;
+  }
+}

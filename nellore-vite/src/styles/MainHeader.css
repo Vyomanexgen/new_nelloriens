@@ -1,0 +1,71 @@
+.main-header {
+  background-color: #2d5a87;
+  color: white;
+  padding: 15px 0;
+}
+
+.logo-container {
+  position: relative;
+}
+
+.logo-circle {
+  width: 50px;
+  height: 50px;
+  background-color: #3b82f6;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.logo-circle i {
+  font-size: 1.5rem;
+  color: white;
+}
+
+.notification-dot {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  width: 12px;
+  height: 12px;
+  background-color: #ef4444;
+  border-radius: 50%;
+  border: 2px solid white;
+}
+
+.logo-text {
+  color: white;
+}
+
+.logo-title {
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: white;
+}
+
+.logo-tagline {
+  font-size: 0.9rem;
+  color: #cbd5e1;
+  font-weight: 400;
+}
+
+.language-dropdown {
+  min-width: 120px;
+}
+
+.language-select {
+  background-color: transparent;
+  color: white;
+  border: 1px solid #3b82f6;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  border-radius: 6px;
+  padding: 8px 12px;
+  font-size: 0.9rem;
+}
+
+.language-select option {
+  background-color: #2d5a87;
+  color: white;
+}

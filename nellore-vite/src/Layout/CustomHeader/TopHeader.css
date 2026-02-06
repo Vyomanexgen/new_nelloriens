@@ -1,0 +1,103 @@
+.top-header {
+    background-color: #0a3d95;
+    color: white;
+    font-size: 0.9rem;
+}
+
+.top-header .container-fluid {
+    padding-left: 0;
+    padding-right: 10px;
+}
+
+.top-header-content {
+    padding-left: 0.5rem;
+}
+
+.top-header-content>div:last-child {
+    margin-left: auto;
+    padding-right: 0;
+}
+
+.top-header-icon {
+    font-size: 0.875rem;
+}
+
+/* Language Selector Styles */
+.language-selector {
+    position: relative;
+    display: inline-block;
+    margin-left: 0.5rem;
+}
+
+.language-dropdown {
+    appearance: none;
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 4px;
+    color: white;
+    padding: 0.2rem 1.5rem 0.2rem 0.6rem;
+    font-size: 0.8rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.language-dropdown:hover,
+.language-dropdown:focus {
+    border-color: white;
+    background-color: rgba(255, 255, 255, 0.2);
+    outline: none;
+}
+
+.language-dropdown option {
+    background-color: #0a3d95;
+    color: white;
+}
+
+.dropdown-arrow {
+    position: absolute;
+    right: 0.5rem;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+    font-size: 0.65rem;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+@media (max-width: 992px) {
+    .top-header {
+        font-size: 0.85rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .top-header {
+        font-size: 0.8rem;
+    }
+
+    .top-header-content {
+        flex-direction: column;
+        justify-content: center !important;
+        align-items: center !important;
+        gap: 0.5rem;
+    }
+
+    /* Reset margin for the second child when stacked */
+    .top-header-content>div:last-child {
+        margin-left: 0;
+    }
+
+    .language-selector {
+        margin-left: 0;
+        margin-top: 0.25rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .top-header {
+        font-size: 0.75rem;
+    }
+
+    .top-header-content {
+        gap: 0.25rem;
+    }
+}

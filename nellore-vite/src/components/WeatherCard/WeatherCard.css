@@ -1,0 +1,215 @@
+.weather-card {
+  background-color: #12293e;
+  color: #ffffff;
+  border-radius: 20px;
+  padding: 20px;
+  /* Reduced padding for sidebar fit */
+  width: 100%;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  box-sizing: border-box;
+  overflow: hidden;
+  /* Prevent spillover */
+}
+
+.weather-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+  /* Reduced bottom margin */
+  width: 100%;
+}
+
+/* Icon Composite System */
+.icon-composite {
+  position: relative;
+  width: 50px;
+  /* Reduced size */
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.main-composite {
+  font-size: 40px;
+  /* Reduced icon size */
+  margin-bottom: 5px;
+}
+
+.small-composite {
+  width: 30px;
+  height: 30px;
+  font-size: 20px;
+  margin-bottom: 5px;
+}
+
+/* Layer positioning */
+.icon-layer {
+  position: absolute;
+}
+
+.sun-layer {
+  color: #ffc107;
+  top: 0;
+  left: -5px;
+  font-size: 32px;
+  /* Reduced from 40px */
+  z-index: 1;
+}
+
+.cloud-layer {
+  color: #64b5f6;
+  bottom: 5px;
+  right: -5px;
+  font-size: 45px;
+  /* Reduced from 55px */
+  z-index: 2;
+  filter: drop-shadow(0 0 2px rgba(0, 0, 0, 0.3));
+}
+
+.sun-layer-small {
+  color: #ffc107;
+  top: 2px;
+  left: 0;
+  font-size: 16px;
+  z-index: 1;
+}
+
+.cloud-layer-small {
+  color: #64b5f6;
+  bottom: 0;
+  right: 0;
+  font-size: 24px;
+  z-index: 2;
+}
+
+.sun-full {
+  color: #ffc107;
+  font-size: 24px;
+}
+
+.rain-cloud {
+  color: #64b5f6;
+  font-size: 24px;
+}
+
+.storm-cloud {
+  color: #64b5f6;
+  font-size: 24px;
+}
+
+.heavy-cloud {
+  color: #90caf9;
+  font-size: 24px;
+}
+
+/* Text groups */
+.current-weather-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  /* Allow flex sizing */
+  min-width: 0;
+  /* Allow shrinking if needed */
+}
+
+.condition-text {
+  font-size: 0.8rem;
+  /* Reduced font size */
+  font-weight: 600;
+  margin-top: 5px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
+}
+
+.current-temp-container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex: 0 0 auto;
+  /* Don't shrink */
+  margin: 0 10px;
+  /* Add margin to separate from sides */
+}
+
+.temp-value {
+  font-size: 2.8rem;
+  /* Reduced from 3.5rem */
+  font-weight: 400;
+  line-height: 1;
+}
+
+.temp-unit {
+  font-size: 1.2rem;
+  margin-top: 5px;
+  margin-left: 3px;
+}
+
+.weather-stats {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  font-size: 0.75rem;
+  /* Reduced font size */
+  flex: 1;
+  min-width: 0;
+}
+
+.stat-line {
+  display: flex;
+  justify-content: flex-end;
+  /* Push content to ends, but since we have label/value, let's explicit */
+  align-items: center;
+  gap: 8px;
+  /* Reduce gap */
+  width: 100%;
+}
+
+.stat-label {
+  color: #cfd8dc;
+  text-align: left;
+  flex: 0 0 auto;
+}
+
+.stat-value {
+  text-align: right;
+  white-space: nowrap;
+  flex: 0 0 auto;
+}
+
+
+/* Forecast Section */
+.weather-forecast {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+  padding-top: 15px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.forecast-day {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  flex: 1;
+}
+
+.day-name {
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: #e0e0e0;
+  text-transform: uppercase;
+  margin-bottom: 2px;
+}
+
+.day-temp {
+  font-size: 0.8rem;
+  font-weight: 500;
+}

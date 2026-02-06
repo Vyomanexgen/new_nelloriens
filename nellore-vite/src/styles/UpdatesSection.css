@@ -1,0 +1,37 @@
+.updates-section {
+  max-width: 1000px;
+  margin: 0; 
+}
+
+.update-card {
+  background-color: #fff;
+  border-radius: 12px;
+  transition: all 0.2s ease-in-out;
+}
+
+.update-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+.card-body {
+  padding: 1rem 1.25rem;
+}
+
+.card-title {
+  color: #1a1a1a;
+}
+
+.card-text {
+  color: #555;
+  margin-bottom: 0.5rem;
+}
+
+a {
+  color: #0d6efd;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
