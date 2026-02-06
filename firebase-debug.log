@@ -1,0 +1,17 @@
+[debug] [2026-02-05T09:49:51.236Z] ----------------------------------------------------------------------
+[debug] [2026-02-05T09:49:51.241Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\jagad\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js emulators:start
+[debug] [2026-02-05T09:49:51.241Z] CLI Version:   15.5.1
+[debug] [2026-02-05T09:49:51.241Z] Platform:      win32
+[debug] [2026-02-05T09:49:51.241Z] Node Version:  v24.12.0
+[debug] [2026-02-05T09:49:51.241Z] Time:          Thu Feb 05 2026 15:19:51 GMT+0530 (India Standard Time)
+[debug] [2026-02-05T09:49:51.241Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2026-02-05T09:49:53.646Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] Failed to authenticate, have you run firebase login?
+[warn] !  emulators: You are not currently authenticated so some features may not work correctly. Please run firebase login to authenticate the CLI. 
+[debug] [2026-02-05T09:49:59.934Z] Error: Timed out.
+    at Timeout._onTimeout (C:\Users\jagad\AppData\Roaming\npm\node_modules\firebase-tools\lib\utils.js:308:49)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers (node:internal/timers:541:7)
+[error] 
+[error] Error: An unexpected error has occurred.
